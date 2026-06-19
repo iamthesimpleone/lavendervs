@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Lavender VS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="gate" class="gate" hidden>
+  <form id="gate-form" class="gate-card">
+    <h1>Lavender VS</h1>
+    <p>Enter the passphrase to continue.</p>
+    <input id="gate-input" type="password" autocomplete="off" autofocus />
+    <button type="submit">Enter</button>
+    <p id="gate-error" class="gate-error" hidden>Not quite — try again.</p>
+  </form>
+</div>
+
+<main id="site" hidden>
+
+  <section class="hero">
+    <img class="hero-img" src="img/hero.jpg" alt="" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="brand">Lavender VS</h1>
+      <nav class="hero-nav">
+        <a href="#album">Album</a>
+        <a href="#demo">Demo</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </section>
+
+  <section id="album" class="album">
+    <div class="album-art">
+      <img src="img/cover.jpg" alt="Amber Nights album cover" />
+      <p class="album-title">Amber Nights</p>
+    </div>
+
+    <ol class="tracklist" id="tracklist">
+      <!-- populated by app.js -->
+    </ol>
+  </section>
+
+  <section id="demo" class="demo">
+    <h2>Demo</h2>
+    <p class="demo-sub">From the new record, in progress.</p>
+    <div class="demo-track" data-slug="will-you-bring-it-in-demo" data-title="Will You Bring It In (Dandy Version)">
+      <button class="play-btn" aria-label="Play">▶</button>
+      <div class="track-meta">
+        <span class="track-title">Will You Bring It In</span>
+        <span class="track-sub">Dandy Version</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>Lavender VS is a singer and songwriter. <em>Amber Nights</em> is her debut record.</p>
+    <ul class="socials">
+      <li><a href="#" data-placeholder>Spotify</a></li>
+      <li><a href="#" data-placeholder>Bandcamp</a></li>
+      <li><a href="#" data-placeholder>Apple Music</a></li>
+      <li><a href="#" data-placeholder>Instagram</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Lavender VS. All rights reserved.</p>
+  </footer>
+
+  <div id="player" class="player" hidden>
+    <div class="player-meta">
+      <span id="player-title">—</span>
+      <span id="player-sub"></span>
+    </div>
+    <audio id="audio" controls preload="none"></audio>
+    <button id="player-close" aria-label="Close player">×</button>
+  </div>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

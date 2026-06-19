@@ -1,0 +1,23 @@
+# Source media (the originals live outside the deployable html/ dir)
+/Lyrics/
+/MP3s (Track Order)/
+/Portraits/
+/Song Demo - Will You Bring It In/
+/notes.txt
+
+# Build / scratch scripts
+build_assets.py
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.tmp
+.vscode/
+.idea/
+.claude/
+
+# Python
+__pycache__/
+*.pyc
