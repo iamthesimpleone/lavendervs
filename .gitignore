@@ -3,7 +3,7 @@
 /MP3s (Track Order)/
 /Portraits/
 /Song Demo - Will You Bring It In/
-/notes.txt
+/notes*.txt
 
 # Build / scratch scripts
 build_assets.py

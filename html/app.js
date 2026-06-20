@@ -3,16 +3,16 @@
 const PASSPHRASE_HASH = "881695eba0fc3018cb39cfadf6da36540092146f1f117e56d465573679388c5c";
 
 const TRACKS = [
-  { slug: "capsized",                title: "Capsized" },
-  { slug: "christmas-party",         title: "Christmas Party" },
-  { slug: "fascination-waters",      title: "Fascination Waters" },
-  { slug: "footloose",               title: "Footloose" },
-  { slug: "just-what-you-said",      title: "Just What You Said" },
-  { slug: "man-in-the-glass-house",  title: "Man In The Glass House" },
-  { slug: "never-quite-time",        title: "Never Quite Time" },
-  { slug: "not-a-world",             title: "Not A World" },
-  { slug: "texas-cactus",            title: "Texas Cactus" },
   { slug: "will-you-bring-it-in",    title: "Will You Bring It In" },
+  { slug: "christmas-party",         title: "Christmas Party" },
+  { slug: "never-quite-time",        title: "Never Quite Time" },
+  { slug: "man-in-the-glass-house",  title: "Man In The Glass House" },
+  { slug: "not-a-world",             title: "Not A World" },
+  { slug: "just-what-you-said",      title: "Just What You Said" },
+  { slug: "capsized",                title: "Capsized" },
+  { slug: "footloose",               title: "Footloose" },
+  { slug: "fascination-waters",      title: "Fascination Waters" },
+  { slug: "texas-cactus",            title: "Texas Cactus" },
 ];
 
 // ---------- Password gate ----------
@@ -200,13 +200,6 @@ function bindPlayButtons() {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       playTrack(btn, track.dataset.slug, title);
-    });
-  });
-
-  document.querySelectorAll(".demo-track").forEach(node => {
-    const btn = node.querySelector(".play-btn");
-    btn.addEventListener("click", () => {
-      playTrack(btn, node.dataset.slug, node.dataset.title, "Demo");
     });
   });
 }
